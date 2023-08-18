@@ -1,0 +1,87 @@
+{% include 'sitio/head_palmer.html' %}
+
+    <section class="bg-light">
+
+    
+        <div class="container" style="margin-bottom: 5rem;">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8"> <!-- Aquí se establece el ancho específico, en este caso 8 columnas en pantallas medianas o mayores -->
+                    <header class="text-center text-danger bg-light" style="margin-bottom: 5rem; margin-top: 5rem;">
+                        <h2 class="font-weight-bold">COMUNICADO</h2>
+                        <span class="separador-titulos"></span>
+                    </header>
+                    <div>
+                        <div class="col justify-content-left">
+                            <b><p>Señores Padres de Familia, reciban un coordial saludo de la Institución Educativa Palmer School.</p></b>
+                            Mediante el presente de les comunica que la entrega de los libros correspondientes al III y IV Bimestre se realizará el
+                            jueves 3 de Agosto hastas las 5 p.m. Para ello deberán encontrarse al día en el pago respectivo.<br><br>
+    
+                            Así mismo, he de indicarles que no se entregara el material educativo a los alumnos que no hayan cancelado la cuota total de los libros.<br><br>
+    
+                            Agradeceremos a los Padres de Familia que se encuentran al día en sus pagos.<br><br><br>
+    
+                            <b>Nota: Hora de refrigerio de 1 p.m a 2 p.m.</b><br><br><br>
+                            <b>Atentamente:</b><br><br><br>
+                        </p>
+                            <center>
+                                <b>DIRECCIÓN GENERAL</b><br>
+                                <b>SUBDIRECCIÓN ACADÉMICA</b>
+                            </center>
+                        <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section class="bg-light">
+        <header class="text-center text-white text-uppercase mb-5 py-5 bg-success">
+          <h3 class="display-5 font-weight-bold">últimos Comunicados directivos</h3>
+          <span class="separador-titulos"></span>
+        </header>
+
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="{{ url_for('static', filename='/images/logo_head.png') }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><b>Entrega de Libros III y IV bimestrestre</b></h5>
+              <p class="card-text">Mediante el presente de les comunica que la entrega de los libros correspondientes al III y IV Bimestre se realizará el jueves 3 de Agosto.</p>
+              <div class="p-3 mb-2 bg-success text-white text-center custom-width">
+                  <a href="/comunicado" class="text-white">Leer Comunicado</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{{ url_for('static', filename='/images/logo_head.png') }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><b>Programa de Aniversario</b></h5>
+              <p class="card-text">Mediante el presente de les comunica el cronograma programado para nuestra semana de aniversario... </p>
+              <div class="p-3 mb-2 bg-success text-white text-center custom-width">
+                <a href="/comunicado" class="text-white">Leer Comunicado</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{{ url_for('static', filename='/images/logo_head.png') }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><b>Charla para alumnos</b></h5>
+              <p class="card-text">Invitamos a todos nuestros alumnos de secundaria a participar de esta interesante charla.......</p>
+              <div class="p-3 mb-2 bg-success text-white text-center custom-width">
+                <a href="/comunicado" class="text-white">Leer Comunicado</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      </section>
+{% include 'sitio/foot_palmer.html' %}

@@ -1,0 +1,488 @@
+@charset "UTF-8";
+:root {
+  --color-principal: #ffff;
+  --color-secondary: #04b4e0;
+  --color-background: #f2f7f9;
+  --color-transparent: transparent;
+  --color-icon: #b5b6b7;
+  --color-titles: #222222;
+  --color-subtitle: #888;
+  --color-text: #555;
+  --color-border-reviews:#E5E6E7;
+  --color-company: #A5A6A7;
+  --color-head-foot: #293855;
+  --color-orange: rgb(207, 162, 79);
+  --color-h2: #337ab7;
+}
+
+/*------------------------------
+1. TIPOGRAFIA DEL SITIO
+--------------------------------*/
+html {
+  font-size: 13px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #696969;
+}
+
+header, footer, #porque-elegirnos {
+  background-color: var(--color-head-foot);
+}
+
+/*-------------------------------------------
+2. COLOR DE FONDO PRINCIPAL
+---------------------------------------------*/
+.bg-primary {
+  background-color: #337ab7 !important;
+}
+
+/*-------------------------------------------
+3. COLOR DEL TEXTO PRINCIPAL
+---------------------------------------------*/
+.text-primary {
+  color: #337ab7 !important;
+}
+
+/*------------------------------------------
+4. ESTILOS GENERALES DE BOTONES
+-------------------------------------------*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.31);
+}
+
+.btn:after {
+  font-family: "FontAwesome";
+  position: relative;
+  left: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover:after {
+  left: 1rem;
+  transform: rotateZ(-360deg);
+}
+
+/*--------------------------------------------
+5. ESTILOS BOTON PRINCIPAL ".btn-primary"
+--------------------------------------------*/
+.btn-primary {
+  background-color: #337ab7 !important;
+  border-color: #285f8f !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #285f8f !important;
+}
+
+.btn-primary:active {
+  background-color: #1d4567 !important;
+  border-color: #122a3f !important;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(51, 122, 183, 0.5) !important;
+}
+
+/*-----------------------------------------
+6. SECCION BARRA DE NAVEGACIÓN ".navbar"
+------------------------------------------*/
+.btn-buscar {
+  padding: 0.6rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/*Estilo Dropdown*/
+.dropdown-menu {
+  border: 1px solid #337ab7;
+  border-top-width: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu a i {
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+/*--------------------------------------------
+7. SECCION CAJA DE BUSQUEDA "#buscador-modal"
+---------------------------------------------*/
+#buscador-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.86);
+  z-index: 1000;
+  display: none;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #337ab7;
+  font-size: 3rem;
+}
+
+#nombre {
+  height: auto;
+  border-radius: 3rem 0 0 3rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#buscar:after {
+  content: "";
+}
+
+#buscar {
+  border-radius: 0 3rem 3rem 0;
+  font-size: 1.5rem;
+}
+
+/*---------------------------------------------
+8. ESTILOS PRESENTACIÓN "#presentacion"
+----------------------------------------------*/
+#presentacion {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bienvenidos {
+  flex-grow: 1;
+}
+
+/*ESTILOS PARA INTERNET EXPLORER 11+*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    min-height: 1px;
+  }
+}
+/*---------------------------------------------
+9. ESTILOS BIENVENIDOS ".bienvenidos"
+----------------------------------------------*/
+.bienvenidos {
+  background: url("../images/fondo-bienvenidos.png") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  animation: changeBackground 10s infinite alternate;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("../images/1.jpg");
+  }
+  50% {
+    background-image: url("../images/2.jpg");
+  }
+  100% {
+    background-image: url("../images/3.jpg");
+  }
+}
+.bienvenidos:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.41);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bienvenidos .btn {
+  width: 70%;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/*-----------------------------------------------
+10. ESTILOS SEPARADOR ".separador-titulos"
+-------------------------------------------------*/
+.separador-titulos {
+  display: inline-block;
+  margin-top: 2rem;
+  height: 4px;
+  width: 80px;
+  background: #337ab7;
+}
+
+.separador-titulos_2 {
+  display: inline-block;
+  margin-top: 0.5rem;
+  height: 2px;
+  width: 100px;
+  background: red;
+}
+
+/*-----------------------------------------------
+11. ESTILOS PROYECTOS "#proyectos"
+-------------------------------------------------*/
+.proyecto {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.proyecto .mascara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(31, 29, 86, 0.73);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+.proyecto .mascara h3,
+.proyecto .mascara p {
+  position: relative;
+  top: -2rem;
+  transition: all 0.3s ease;
+  /*Correción para IE11+*/
+  width: 100%;
+}
+
+.proyecto .mascara .btn {
+  position: relative;
+  top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.proyecto img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/*Estado HOVER de cada proyecto*/
+.proyecto:hover .mascara {
+  opacity: 1;
+}
+
+.proyecto:hover .mascara h3,
+.proyecto:hover .mascara p,
+.proyecto:hover .mascara .btn {
+  top: 0;
+}
+
+.proyecto:hover img {
+  transform: scale(1.3);
+}
+
+/*--------------------------------------------
+12. EMPIEZAN LAS MEDIAS QUERIES
+----------------------------------------------*/
+@media (min-width: 768px) {
+  .btn-buscar {
+    padding: 0;
+    font-size: 1.4rem;
+    border-color: transparent;
+  }
+  /*Estilos MegaMenu*/
+  .navbar .container {
+    position: relative;
+  }
+  .mega-menu {
+    position: static;
+  }
+  .mega-menu .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: auto;
+  }
+  .bienvenidos {
+    background: url("../images/fondo-bienvenidos-md.jpg") no-repeat center center/cover;
+    text-align: left;
+  }
+  .bienvenidos .btn {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 990px) {
+  html {
+    font-size: 16px;
+  }
+}
+.btn-wsp {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  line-height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background: #0df053;
+  color: #fff;
+  border-radius: 40px;
+  text-align: center;
+  justify-content: center;
+  font-size: 70px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.btn-wsp:hover {
+  text-decoration: none;
+  color: #0df053;
+  background: #fff;
+}
+
+#testimonios_apoderados {
+  background: linear-gradient(-100deg, white 50%, rgb(101, 160, 81) 50%);
+}
+
+#testimonios_apoderados .img-text {
+  width: 100%;
+  height: 300px;
+  display: block;
+  padding: 40% 5%;
+  text-align: center;
+  background: #262626;
+  color: #fff;
+  border-radius: 15px;
+}
+
+#testimonios_apoderados .img-text h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#testimonios_apoderados .img-text p {
+  font-size: 14px;
+}
+
+#testimonios_apoderados .single-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#testimonios_apoderados .img-area {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  top: 15px;
+  left: 125px;
+  border-radius: 50%;
+}
+
+#testimonios_apoderados .img-area img {
+  width: 100%;
+}
+
+#testimonios_apoderados .carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -50px;
+}
+
+#testimonios_apoderados .carousel-indicators li {
+  background: #000;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+#testimonios_apoderados .carousel-indicators .active {
+  background: #fff;
+}
+
+.reviews__review {
+  flex-basis: calc(50% - 2rem);
+  border: 2px solid var(--color-border-reviews);
+  border-radius: 2rem;
+  padding-top: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  margin-right: 0.1rem; /*MArgenes entre las targetas*/
+  color: var(--color-text);
+}
+
+.review__image-container {
+  width: 100%; /*anchura de la imagen del 100%*/
+}
+
+.review__image {
+  max-width: 9rem; /*para que el ancho y alto de la imagen no se vea superada*/
+  max-height: 9rem;
+  margin-top: -4.5rem; /*Para centrar la imagen*/
+  margin-bottom: 2rem;
+  border-radius: 9rem; /*Para que quede redonda la imagen*/
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.22); /*Desplazamientos en x, y, difuminado, color*/
+}
+
+.review__company {
+  padding-bottom: 1.5rem;
+  color: var(--color-head-foot);
+}
+
+.card-img-top {
+  width: 307px;
+  height: auto;
+  position: relative; /* Establecer posición relativa para el posicionamiento absoluto de la imagen */
+  left: 50%; /* Mover la imagen al 50% del contenedor */
+  transform: translateX(-50%); /* Centrar horizontalmente utilizando transformación */
+}
+
+.custom-width {
+  width: 50%; /* El ancho deseado, en este caso 50% */
+  margin: 0 auto; /* Centrar horizontalmente */
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .reviews__review {
+    flex-basis: calc(50% - 2rem);
+    border: 2px solid var(--color-border-reviews);
+    border-radius: 2rem;
+    margin-top: 3rem;
+    padding-top: 20%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
+    margin-right: 0.1rem; /*MArgenes entre las targetas*/
+    color: var(--color-text);
+  }
+}/*# sourceMappingURL=estilos.css.map */
